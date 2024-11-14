@@ -1,0 +1,326 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #9c8989;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #fff;
+    background-color: #4F1721;
+    border: 2px solid #7a2837; 
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-left: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    flex: 3;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #9c8989;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(248, 192, 87);
+}
+
+/* Seccion Galeria */
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #7a2837; 
+    margin-top: 70px; 
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    transition: opacity 1s ease-in-out; 
+    opacity: 0; 
+    display: none;
+}
+
+.slider-item.active {
+    opacity: 1; 
+    display: block; 
+}
+
+.slider img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.slider-text {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background-color: rgba(8, 8, 8, 0.5); 
+    color: #fff; 
+    padding: 20px;
+    border-radius: 5px; 
+    font-size: 1.5rem; 
+    text-align: left; 
+    max-width: 80%; 
+    box-sizing: border-box; 
+    z-index: 10;
+    border: 2px solid #7a2837; 
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute; 
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20; 
+}
+
+.slider-nav a {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover,
+.slider-nav a.active {
+    opacity: 100%;
+    background-color: #000;
+}
+
+/* Seccion Historia */
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.welcome h1 {
+    color: #351118;
+}
+
+.welcome img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #7a2837; 
+}
+
+.welcome p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Seccion Visita */
+
+.tickets {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid #7a2837;  */
+    background: #9c8989;
+}
+    
+.main-ticket, .main-horario {
+    width: 325px;
+    height: 500px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px #9c8989;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-ticket img, .main-horario img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content, .horario-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-content h2, .horario-content h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p, .horario-content h2 {
+    color: #743131;
+    font-size: 15px;
+    line-height: 1.3;
+}
+    
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #9c8989;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+.horario {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid #7a2837;  */
+    background: #9c8989;
+}
+
+#visita {
+    display: flex;
+    justify-content: center;
+    flex-wrap: 
+}
+
+.tickets, .horario .localizacion {
+    flex: 1; 
+    max-width: 350px; 
+    /* border: 2px solid #7a2837;  */
+    background: #9c8989;
+    margin: 10px;
+}
+
+.localizacion {
+    color: #743131;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.entrada {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin: 20px 0; 
+}
+
+/* Footer */
+.pie {
+    width: 100%;
+    background-color: #351118;
+}
+
+.pie .grupo {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie .grupo .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie .grupo .box figure img {
+    width: 250px;
+}
+
+.pie .grupo .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie .grupo .box p {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.pie .grupo .socials a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #743131;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie .grupo .socials a:hover {
+    color: rgb(248, 192, 87);
+}
+
+.pie .grupo-2 {
+    background-color: #7a2837;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie .grupo-2 small {
+    font-size: 15px;
+}
